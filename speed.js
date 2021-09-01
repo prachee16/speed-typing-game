@@ -116,9 +116,10 @@ function startMatch() {
   }
 }
 
-// Match currentWord to wordInput
+// Match currentWord to wordInput case insensitive
 function matchWords() {
-  if (wordInput.value === currentWord.innerHTML) {
+  const oldVal=wordInput.value.toLowerCase();
+  if (oldVal === currentWord.innerHTML) {
     message.innerHTML = 'Correct!';
     return true;
   } else {
